@@ -12,11 +12,16 @@ import { MatListModule } from '@angular/material/list';
 import { FooterComponent } from './component/template/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
 import { MatCardModule } from '@angular/material/card';
+
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { ProductReadComponent } from './component/product/product-read/product-read.component';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+
+import { FornecedorReadComponent } from './component/fornecedor/fornecedor-read/fornecedor-read.component';
+import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http'
     FooterComponent,
     HomeComponent,
     ProductCrudComponent,
-    ProductReadComponent
+    ProductReadComponent,
+    FornecedorReadComponent,
+    FornecedorCrudComponent,
   ],
   imports: [
     BrowserModule,
