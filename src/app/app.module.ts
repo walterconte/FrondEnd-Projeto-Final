@@ -21,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { FornecedorReadComponent } from './component/fornecedor/fornecedor-read/fornecedor-read.component';
 import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
+import { FormaPagamentoReadComponent } from './component/formaPagamento/forma-pagamento-read/forma-pagamento-read.component';
+import { FormaPagamentoCrudComponent } from './views/forma-pagamento-crud/forma-pagamento-crud.component';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud
     ProductReadComponent,
     FornecedorReadComponent,
     FornecedorCrudComponent,
+    FormaPagamentoReadComponent,
+    FormaPagamentoCrudComponent,
   ],
   imports: [
     BrowserModule,
