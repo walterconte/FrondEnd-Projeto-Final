@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormaPagamento } from './forma-pagamento-read/forma-pagamento.model';
 import { Observable, timeInterval } from 'rxjs';
-import { ThisReceiver } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'

@@ -20,9 +20,17 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 
 import { FornecedorReadComponent } from './component/fornecedor/fornecedor-read/fornecedor-read.component';
-import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
 import { FormaPagamentoReadComponent } from './component/formaPagamento/forma-pagamento-read/forma-pagamento-read.component';
 import { FormaPagamentoCrudComponent } from './views/forma-pagamento-crud/forma-pagamento-crud.component';
+import { ProductCreateComponent } from './component/product/product-create/product-create.component';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { FornecedorCreateComponent } from './component/fornecedor/fornecedor-create/fornecedor-create.component';
+import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
+import { FormaPagamentoCreateComponent } from './component/formaPagamento/forma-pagamento-create/forma-pagamento-create.component';
+
 
 
 @NgModule({
@@ -38,6 +46,9 @@ import { FormaPagamentoCrudComponent } from './views/forma-pagamento-crud/forma-
     FornecedorCrudComponent,
     FormaPagamentoReadComponent,
     FormaPagamentoCrudComponent,
+    ProductCreateComponent,
+    FornecedorCreateComponent,
+    FormaPagamentoCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +59,10 @@ import { FormaPagamentoCrudComponent } from './views/forma-pagamento-crud/forma-
     MatListModule,
     MatCardModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

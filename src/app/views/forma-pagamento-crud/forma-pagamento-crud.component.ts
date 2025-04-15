@@ -14,7 +14,7 @@ export class FormaPagamentoCrudComponent implements OnInit{
   ngOnInit(): void {
   }
 
-  navigateToProductCreate(): void{
+  navigateToFormaPagamentoCreate(): void{
     this.router.navigate(['/formaPagamento/create'])
   }
 
