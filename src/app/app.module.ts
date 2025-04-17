@@ -30,6 +30,7 @@ import { FormsModule } from '@angular/forms';
 import { FornecedorCreateComponent } from './component/fornecedor/fornecedor-create/fornecedor-create.component';
 import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
 import { FormaPagamentoCreateComponent } from './component/formaPagamento/forma-pagamento-create/forma-pagamento-create.component';
+import { MatTableModule } from '@angular/material/table'
 
 
 
@@ -62,7 +63,8 @@ import { FormaPagamentoCreateComponent } from './component/formaPagamento/forma-
     HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
