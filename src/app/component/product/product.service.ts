@@ -10,7 +10,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class ProductService {
 
-  baseUrl = "http://localhost:3001/products"
+  baseUrl = "http://localhost:8080/produtos"
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
@@ -35,7 +35,7 @@ export class ProductService {
   }
 
   update(product :Product): Observable<Product>{
-    const url = `${this.baseUrl}/${product.id}`
+    const url = `${this.baseUrl}/${product.proId}`
     return this.http.put<Product>(url, product)
   }
 

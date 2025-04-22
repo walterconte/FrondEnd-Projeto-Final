@@ -1,7 +1,6 @@
 export interface Fornecedor{
-    idFornecedor?: number
-    nome: string
-    cnpj: number
-    razaoSocial: string
-    nomeFantasia: string
+    forId?: number
+    forCnpj: number
+    forRazaoSocial: string
+    forNomeFantasia: string
 }

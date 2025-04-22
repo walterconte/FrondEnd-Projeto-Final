@@ -1,17 +1,14 @@
 <mat-card>
-    <mat-card-title>Novo fornecedor</mat-card-title>
+    <mat-card-title>Novo Fornecedor</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="fornecedor.nome" name="mome">
+            <input matInput placeholder="CNPJ" [(ngModel)]="fornecedor.forCnpj" name="forCnpj" required>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="C.N.P.J" [(ngModel)]="fornecedor.cnpj" name="cnpj">
+            <input matInput placeholder="Razão Social" [(ngModel)]="fornecedor.forRazaoSocial" name="forRazaoSocial" required>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Razão Social" [(ngModel)]="fornecedor.razaoSocial" name="razaoSocial">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Nome Fantasia" [(ngModel)]="fornecedor.nomeFantasia" name="nomeFantasia">
+            <input matInput placeholder="Nome Fantasia" [(ngModel)]="fornecedor.forNomeFantasia" name="forNomeFantasia" required>
         </mat-form-field>
     </form>
 
@@ -22,5 +19,4 @@
     <button mat-raised-button (click)="cancel()">
         Cancelar
     </button>
-
 </mat-card>
