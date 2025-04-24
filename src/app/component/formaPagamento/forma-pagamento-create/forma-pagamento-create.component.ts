@@ -22,12 +22,12 @@ export class FormaPagamentoCreateComponent implements OnInit {
   createFormaPagamento(): void {
     this.formaPagamentoService.create(this.formaPagamento).subscribe(() => {
       this.formaPagamentoService.showMessage('Forma de pagamento criada!');
-      this.router.navigate(['/formas-pagamento']); // Corrigido para o caminho correto
+      this.router.navigate(['/formaPagamento']); // Corrigido para o caminho correto
     });
   }
 
   cancel(): void {
-    this.router.navigate(['/formas-pagamento']); // Corrigido para o caminho correto
+    this.router.navigate(['/formaPagamento']); // Corrigido para o caminho correto
   }
 }
 
