@@ -1,6 +1,4 @@
 export interface FormaPagamento{
-    idFormaPagamento?: number
-    tipoPagamento: string
-    status: string
-    discricao: string
+    fpgId?: number
+    fpgDescricao: string
 }

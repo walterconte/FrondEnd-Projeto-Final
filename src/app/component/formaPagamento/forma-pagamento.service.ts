@@ -2,14 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormaPagamento } from './forma-pagamento-read/forma-pagamento.model';
-import { Observable, timeInterval } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FormaPagamentoService {
 
-  baseUrl = "http://localhost:3001/forma-pagamento"
+  baseUrl = "http://localhost:8080/formas-pagamento"
 
   constructor(private snackBar: MatSnackBar,private http: HttpClient) { }
 
@@ -35,7 +35,7 @@ export class FormaPagamentoService {
   }
 
   update(formaPagamento: FormaPagamento): Observable<FormaPagamento>{
-    const url = `${this.baseUrl}/${formaPagamento.idFormaPagamento}`
+    const url = `${this.baseUrl}/${formaPagamento.fpgId}`
     return this.http.put<FormaPagamento>(url, formaPagamento)
   }
 

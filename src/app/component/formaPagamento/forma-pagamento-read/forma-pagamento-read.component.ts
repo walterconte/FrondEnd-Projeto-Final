@@ -9,15 +9,15 @@ import { FormaPagamentoService } from '../forma-pagamento.service'; // Ajuste o 
 })
 export class FormaPagamentoReadComponent implements OnInit {
 
-  formaPagamento!: FormaPagamento[]; // Corrigido para plural
-  displayedColumns = ['idFormaPagamento', 'tipoPagamento', 'status', 'discricao', 'action']; // Corrigido para corresponder à interface
+  formaPagamentos!: FormaPagamento[]; // Corrigido para plural
+  displayedColumns = ['fpgId', 'fpgDescricao', 'action']; // Corrigido para corresponder à interface
 
   constructor(private formaPagamentoService: FormaPagamentoService) { }
 
   ngOnInit(): void {
-    this.formaPagamentoService.read().subscribe(formaPagamento => { // Corrigido para plural
-      this.formaPagamento = formaPagamento; // Corrigido para plural
-      console.log(this.formaPagamento);
+    this.formaPagamentoService.read().subscribe(formaPagamentos => { // Corrigido para plural
+      this.formaPagamentos = formaPagamentos; // Corrigido para plural
+      console.log(this.formaPagamentos);
     });
   }
 }
