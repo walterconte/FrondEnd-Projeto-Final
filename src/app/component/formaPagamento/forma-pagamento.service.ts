@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class FormaPagamentoService {
 
-  baseUrl = "http://localhost:8080/formas-pagamento"
+  baseUrl = "http://localhost:8080/formaspagamento"
 
   constructor(private snackBar: MatSnackBar,private http: HttpClient) { }
 
