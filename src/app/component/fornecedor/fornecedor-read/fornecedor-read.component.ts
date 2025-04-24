@@ -8,7 +8,6 @@ import { FornecedorService } from '../fornecedor.service';
   styleUrls: ['./fornecedor-read.component.css']
 })
 export class FornecedorReadComponent implements OnInit { 
-
   fornecedores!: Fornecedor[]; 
   displayedColumns = ['forId', 'forNomeFantasia', 'forCnpj', 'forRazaoSocial', 'action']; 
 
