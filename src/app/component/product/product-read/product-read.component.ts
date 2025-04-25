@@ -8,15 +8,16 @@ import { Product } from './product.model';
   styleUrls: ['./product-read.component.css']
 })
 export class ProductReadComponent implements OnInit {
-  products!: Product[];
-  displayedColumns = ['proId', 'proNome', 'proPrecoCusto', 'proPrecoVenda', 'action'];
 
-  constructor(private productService: ProductService) { }
+  products!: Product[]; // Array de produtos 
+  displayedColumns = ['proId', 'proNome', 'proPrecoCusto', 'proPrecoVenda', 'action']; // Colunas da tabela
 
-  ngOnInit(): void {
-    this.productService.read().subscribe(products => {
-      this.products = products;
-      console.log(products);
+  constructor(private productService: ProductService) { } // Construtor do componente
+
+  ngOnInit(): void { // Método chamado quando o componente é inicializado
+    this.productService.read().subscribe(products => { // Chamando o método read do ProductService para elr os produtos
+      this.products = products; // Atribuindo os produtos lidos ao array de produtos
+      console.log(products); // Exibindo os produtos no console
     });
   }
 }

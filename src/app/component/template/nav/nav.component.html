@@ -1,34 +1,53 @@
 <mat-sidenav-container class="container">
+    <!-- Contêiner principal que abriga a barra lateral (sidenav) e o conteúdo principal -->
+
     <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+        <!-- Barra lateral que contém a navegação -->
+        <!-- 'mode="side"' define que a barra lateral ficará ao lado do conteúdo -->
+        <!-- 'opened' indica que a barra lateral está sempre aberta -->
+        <!-- 'fixedInViewport="true"' fixa a barra lateral na viewport -->
+        <!-- 'fixedTopGap="64"' define um espaço fixo no topo para o cabeçalho -->
+
         <mat-nav-list class="nav-list">
+            <!-- Lista de navegação dentro da barra lateral -->
+
             <a mat-list-item routerLink="/">
+                <!-- Link para a página inicial -->
                 <i class="material-icons">
-                    home
+                    home <!-- Ícone que representa "home" -->
                 </i>
-                Início
+                Início <!-- Texto do link -->
             </a>
+
             <a mat-list-item routerLink="/products">
+                <!-- Link para a página de produtos -->
                 <i class="material-icons">
-                    storefront
+                    storefront <!-- Ícone que representa "storefront" -->
                 </i>
-                Produtos
+                Produtos <!-- Texto do link -->
             </a>
+
             <a mat-list-item routerLink="/fornecedores">
+                <!-- Link para a página de fornecedores -->
                 <i class="material-icons">
-                    group_add
+                    group_add <!-- Ícone que representa "group_add" -->
                 </i>
-                Fornecedores
+                Fornecedores <!-- Texto do link -->
             </a>
+
             <a mat-list-item routerLink="/formaPagamento">
+                <!-- Link para a página de forma de pagamento -->
                 <i class="material-icons">
-                    local_atm
+                    local_atm <!-- Ícone que representa "local_atm" -->
                 </i>
-                Pagamento
+                Pagamento <!-- Texto do link -->
             </a>
         </mat-nav-list>
     </mat-sidenav>
+
     <mat-sidenav-content class="content">
-        <!-- usamos para começar a trabalhar com a navegação a partir do clique... -->
+        <!-- Área de conteúdo principal onde o conteúdo da rota será exibido -->
+        <!-- 'router-outlet' é um marcador onde o conteúdo das rotas será renderizado -->
         <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>

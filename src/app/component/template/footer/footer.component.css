@@ -8,8 +8,8 @@
     /*coloca no final da linha. sendo no lado direiro parte inferior*/
     justify-content: flex-end;
 }
-
-.footer > span{
+/* Estilo para o texto no footer */
+.footer > span{ 
     font-size: 1.1rem;
     font-weight: 300;
 }

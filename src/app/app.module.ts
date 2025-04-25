@@ -30,7 +30,10 @@ import { FormsModule } from '@angular/forms';
 import { FornecedorCreateComponent } from './component/fornecedor/fornecedor-create/fornecedor-create.component';
 import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
 import { FormaPagamentoCreateComponent } from './component/formaPagamento/forma-pagamento-create/forma-pagamento-create.component';
-import { MatTableModule } from '@angular/material/table'
+import { MatTableModule } from '@angular/material/table';
+import { ProductUpdateComponent } from './component/product/product-update/product-update.component';
+import { FornecedorUpdateComponent } from './component/fornecedor/fornecedor-update/fornecedor-update.component';
+import { FormaPagamentoUpdateComponent } from './component/formaPagamento/forma-pagamento-update/forma-pagamento-update.component'
 
 
 
@@ -50,6 +53,9 @@ import { MatTableModule } from '@angular/material/table'
     ProductCreateComponent,
     FornecedorCreateComponent,
     FormaPagamentoCreateComponent,
+    ProductUpdateComponent,
+    FornecedorUpdateComponent,
+    FormaPagamentoUpdateComponent,
   ],
   imports: [
     BrowserModule,

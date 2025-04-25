@@ -7,40 +7,57 @@ import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud
 import { FornecedorCreateComponent } from './component/fornecedor/fornecedor-create/fornecedor-create.component';
 import { FormaPagamentoCrudComponent } from './views/forma-pagamento-crud/forma-pagamento-crud.component';
 import { FormaPagamentoCreateComponent } from './component/formaPagamento/forma-pagamento-create/forma-pagamento-create.component';
+import { ProductUpdateComponent } from './component/product/product-update/product-update.component';
+import { FornecedorUpdateComponent } from './component/fornecedor/fornecedor-update/fornecedor-update.component';
+import { FormaPagamentoUpdateComponent } from './component/formaPagamento/forma-pagamento-update/forma-pagamento-update.component';
 
+// Define as rotas da aplicação
 const routes: Routes = [
   {
-    path: "",
-    component: HomeComponent
-},
-{
-  path: "products",
-  component: ProductCrudComponent
-},
-{
-  path: "products/create",
-  component: ProductCreateComponent
-},
-{
-  path: "fornecedores",
-  component: FornecedorCrudComponent
-},
-{
-  path: "fornecedor/create",
-  component: FornecedorCreateComponent 
-},
-{
-  path: "formaPagamento",
-  component: FormaPagamentoCrudComponent
-},
-{
-  path: "formaPagamento/create",
-  component: FormaPagamentoCreateComponent
-},
+    path: "", // Caminho vazio que redireciona para a página inicial
+    component: HomeComponent // Componente que será exibido na rota raiz
+  },
+  {
+    path: "products", // Caminho para a página de produtos
+    component: ProductCrudComponent // Componente que gerencia a CRUD de produtos
+  },
+  {
+    path: "products/create", // Caminho para a página de criação de produtos
+    component: ProductCreateComponent // Componente que exibe o formulário de criação de produtos
+  },
+  {
+    path: "fornecedores", // Caminho para a página de fornecedores
+    component: FornecedorCrudComponent // Componente que gerencia a CRUD de fornecedores
+  },
+  {
+    path: "fornecedor/create", // Caminho para a página de criação de fornecedores
+    component: FornecedorCreateComponent // Componente que exibe o formulário de criação de fornecedores
+  },
+  {
+    path: "formaPagamento", // Caminho para a página de formas de pagamento
+    component: FormaPagamentoCrudComponent // Componente que gerencia a CRUD de formas de pagamento
+  },
+  {
+    path: "formaPagamento/create", // Caminho para a página de criação de formas de pagamento
+    component: FormaPagamentoCreateComponent // Componente que exibe o formulário de criação de formas de pagamento
+  },
+  {
+    path: "products/update/:id",
+    component: ProductUpdateComponent
+  },
+  {
+    path: "fornecedores/update/:id",
+    component: FornecedorUpdateComponent
+  },
+  {
+    path: "forma-pagamento/update/:id",
+    component: FormaPagamentoUpdateComponent
+  }
 ];
 
+// Define o módulo de roteamento da aplicação
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)], // Importa o RouterModule e configura as rotas
+  exports: [RouterModule] // Exporta o RouterModule para que possa ser utilizado em outros módulos
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { } // Declara o módulo de roteamento

@@ -1,19 +1,21 @@
-.sidenav{
-    background-color: #bfd6c7;
-    width: 200px;
-}
-.sidenav a{
-    color: #fff;
-}
-.sidenav i{
-    padding-right: 10px;
+.sidenav {
+    background-color: #bfd6c7; /* Define a cor de fundo da barra lateral (sidenav) */
+    width: 200px; /* Define a largura da barra lateral como 200 pixels */
 }
 
-.content{
-    padding: 16px;
-    background-color: #ffffff;
+.sidenav a {
+    color: #fff; /* Define a cor do texto dos links na barra lateral como branco */
 }
 
-.material-icons{
-    color: #000000;
+.sidenav i {
+    padding-right: 10px; /* Adiciona um espaço à direita dos ícones na barra lateral */
+}
+
+.content {
+    padding: 16px; /* Adiciona um preenchimento de 16 pixels ao redor do conteúdo principal */
+    background-color: #ffffff; /* Define a cor de fundo do conteúdo principal como branco */
+}
+
+.material-icons {
+    color: #000000; /* Define a cor dos ícones do Material Design como preto */
 }

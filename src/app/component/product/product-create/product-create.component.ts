@@ -11,6 +11,7 @@ import { ProductService } from '../product.service';
 })
 export class ProductCreateComponent implements OnInit {
 
+  // Inicializando o objeto product com valores padrão
   product: Product = {
     proNome: '',          
     proPrecoCusto: 0,    
@@ -24,14 +25,17 @@ export class ProductCreateComponent implements OnInit {
     // Inicializações adicionais, se necessário
   }
 
+  // Método chamado quando o botão "Salvar" é clicado
   createProduct(): void {
-    this.productService.create(this.product).subscribe(() => {
-      this.productService.showMessage('Produto criado!');
-      this.router.navigate(['/products']);
+    this.productService.create(this.product).subscribe(() => {  // Chamando o método create do ProductService para criar o produto
+      this.productService.showMessage('Produto criado!'); // Exibindo mensagem de sucesso após criar o produto
+      this.router.navigate(['/products']); // Redirecionando para a página de produtos
     });
   }
 
+  // Método chamado quando o botão "Cancelar" é clicado
   cancel(): void {
+    // Redirecionando para a página de produtos
     this.router.navigate(['/products']);
   }
 }

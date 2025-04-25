@@ -1,4 +1,4 @@
-export interface Product{
+export interface Product{ // Exportando a interface Product
     proId?: number
     proNome: string
     proPrecoCusto: number
