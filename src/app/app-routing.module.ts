@@ -10,6 +10,10 @@ import { FormaPagamentoCreateComponent } from './component/formaPagamento/forma-
 import { ProductUpdateComponent } from './component/product/product-update/product-update.component';
 import { FornecedorUpdateComponent } from './component/fornecedor/fornecedor-update/fornecedor-update.component';
 import { FormaPagamentoUpdateComponent } from './component/formaPagamento/forma-pagamento-update/forma-pagamento-update.component';
+import { ProductDeleteComponent } from './component/product/product-delete/product-delete.component';
+import { FormaPagamentoDeleteComponent } from './component/formaPagamento/forma-pagamento-delete/forma-pagamento-delete.component';
+import { FornecedorDeleteComponent } from './component/fornecedor/fornecedor-delete/fornecedor-delete.component';
+
 
 // Define as rotas da aplicação
 const routes: Routes = [
@@ -52,7 +56,21 @@ const routes: Routes = [
   {
     path: "forma-pagamento/update/:id",
     component: FormaPagamentoUpdateComponent
+  },
+  {
+    path: "products/delete/:proId",
+    component: ProductDeleteComponent
+  },
+  {
+    path: "forma-pagamento/delete/:fpgId", 
+    component: FormaPagamentoDeleteComponent
+
+  },
+  {
+    path: "fornecedores/delete/:forId", 
+    component: FornecedorDeleteComponent
   }
+
 ];
 
 // Define o módulo de roteamento da aplicação

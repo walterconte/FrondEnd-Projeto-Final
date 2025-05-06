@@ -33,7 +33,10 @@ import { FormaPagamentoCreateComponent } from './component/formaPagamento/forma-
 import { MatTableModule } from '@angular/material/table';
 import { ProductUpdateComponent } from './component/product/product-update/product-update.component';
 import { FornecedorUpdateComponent } from './component/fornecedor/fornecedor-update/fornecedor-update.component';
-import { FormaPagamentoUpdateComponent } from './component/formaPagamento/forma-pagamento-update/forma-pagamento-update.component'
+import { FormaPagamentoUpdateComponent } from './component/formaPagamento/forma-pagamento-update/forma-pagamento-update.component';
+import { ProductDeleteComponent } from './component/product/product-delete/product-delete.component';
+import { FornecedorDeleteComponent } from './component/fornecedor/fornecedor-delete/fornecedor-delete.component'
+import { FormaPagamentoDeleteComponent } from './component/formaPagamento/forma-pagamento-delete/forma-pagamento-delete.component';
 
 
 
@@ -56,6 +59,9 @@ import { FormaPagamentoUpdateComponent } from './component/formaPagamento/forma-
     ProductUpdateComponent,
     FornecedorUpdateComponent,
     FormaPagamentoUpdateComponent,
+    ProductDeleteComponent,
+    FormaPagamentoDeleteComponent,
+    FornecedorDeleteComponent,
   ],
   imports: [
     BrowserModule,
