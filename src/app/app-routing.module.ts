@@ -13,6 +13,10 @@ import { FormaPagamentoUpdateComponent } from './component/formaPagamento/forma-
 import { ProductDeleteComponent } from './component/product/product-delete/product-delete.component';
 import { FormaPagamentoDeleteComponent } from './component/formaPagamento/forma-pagamento-delete/forma-pagamento-delete.component';
 import { FornecedorDeleteComponent } from './component/fornecedor/fornecedor-delete/fornecedor-delete.component';
+import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.component';
+import { ClienteCreateComponent } from './component/cliente/cliente-create/cliente-create.component';
+import { ClienteUpdateComponent } from './component/cliente/cliente-update/cliente-update.component';
+import { ClienteDeleteComponent } from './component/cliente/cliente-delete/cliente-delete.component';
 
 
 // Define as rotas da aplicação
@@ -69,7 +73,24 @@ const routes: Routes = [
   {
     path: "fornecedores/delete/:forId", 
     component: FornecedorDeleteComponent
+  },
+  {
+    path: "cliente",
+    component: ClienteCrudComponent
+  },
+  {
+    path: "cliente/create",
+    component: ClienteCreateComponent
+  },
+  {
+    path: "cliente/update/:id",
+    component: ClienteUpdateComponent
+  },
+  {
+    path: "cliente/delete/:cliId",
+    component: ClienteDeleteComponent
   }
+
 
 ];
 

@@ -1,0 +1,11 @@
+table{ /* Estilo para a tabela */
+    width: 100%; /* Definindo a largura da tabela como 100% */
+}
+
+.edit > i{ /* Estilo para o ícone de edição */
+    color: #d9cd26;
+}
+
+.delete > i{ /* Estilo para o ícone de exclusão */
+    color: #e35e6b;
+}

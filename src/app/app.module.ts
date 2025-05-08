@@ -38,6 +38,12 @@ import { ProductDeleteComponent } from './component/product/product-delete/produ
 import { FornecedorDeleteComponent } from './component/fornecedor/fornecedor-delete/fornecedor-delete.component'
 import { FormaPagamentoDeleteComponent } from './component/formaPagamento/forma-pagamento-delete/forma-pagamento-delete.component';
 
+import { ClienteCreateComponent } from './component/cliente/cliente-create/cliente-create.component';
+import { ClienteReadComponent } from './component/cliente/cliente-read/cliente-read.component';
+import { ClienteUpdateComponent } from './component/cliente/cliente-update/cliente-update.component';
+import { ClienteDeleteComponent } from './component/cliente/cliente-delete/cliente-delete.component';
+import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.component';
+
 
 
 @NgModule({
@@ -62,6 +68,12 @@ import { FormaPagamentoDeleteComponent } from './component/formaPagamento/forma-
     ProductDeleteComponent,
     FormaPagamentoDeleteComponent,
     FornecedorDeleteComponent,
+    ClienteReadComponent,
+    ClienteCreateComponent,
+    ClienteReadComponent,
+    ClienteUpdateComponent,
+    ClienteDeleteComponent,
+    ClienteCrudComponent,
   ],
   imports: [
     BrowserModule,
