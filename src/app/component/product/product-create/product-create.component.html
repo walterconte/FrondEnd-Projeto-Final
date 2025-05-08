@@ -1,0 +1,34 @@
+<!-- Formulário de criação de produto -->
+<mat-card>
+    <!-- Título do formulário -->
+    <mat-card-title>Novo Produto</mat-card-title>
+    
+    <!-- Formulário -->
+    <form>
+      <!-- Campo de nome do produto -->
+      <mat-form-field>
+        <input matInput placeholder="Nome" [(ngModel)]="product.proNome" name="proNome">
+      </mat-form-field>
+      
+      <!-- Campo de preço de custo -->
+      <mat-form-field>
+        <input matInput placeholder="Preço de Custo (R$)" [(ngModel)]="product.proPrecoCusto" name="proPrecoCusto">
+      </mat-form-field>
+      
+      <!-- Campo de preço de venda -->
+      <mat-form-field>
+        <input matInput placeholder="Preço de Venda (R$)" [(ngModel)]="product.proPrecoVenda" name="proPrecoVenda">
+      </mat-form-field>
+    </form>
+    
+    <!-- Botões de ação -->
+    <button mat-raised-button (click)="createProduct()" color="primary">
+      <!-- Botão de salvar -->
+      Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+      <!-- Botão de cancelar -->
+      Cancelar
+    </button>
+  </mat-card>
