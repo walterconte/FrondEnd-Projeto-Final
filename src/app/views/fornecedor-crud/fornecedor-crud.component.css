@@ -1,5 +1,5 @@
 button{
-    background-color: #bfd6c7; /* Verde */
+    background-color: #5790da; /* Verde */
     border: none; /* Sem borda */
     color: rgb(0, 0, 0); /* Texto branco */
     padding: 15px 32px; /* Espaçamento interno */
@@ -14,7 +14,7 @@ button{
     }
     
     button:hover {
-    background-color: #a5c9b1; /* Verde mais escuro ao passar o mouse */
+    background-color: #2e3bee; /* Verde mais escuro ao passar o mouse */
     }
     
     button:active {
