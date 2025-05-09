@@ -19,6 +19,18 @@
       <mat-form-field>
         <input matInput placeholder="Preço de Venda (R$)" [(ngModel)]="product.proPrecoVenda" name="proPrecoVenda">
       </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Descrição" [(ngModel)]="product.proDescricao" name="proDescricao">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Quantidade em Stock" [(ngModel)]="product.proQuantidadeStock" name="proQuantidadeStock">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Status" [(ngModel)]="product.proStatus" name="proStatus">
+      </mat-form-field>
     </form>
     
     <!-- Botões de ação -->

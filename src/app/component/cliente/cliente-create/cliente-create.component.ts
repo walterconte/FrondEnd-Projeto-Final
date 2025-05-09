@@ -16,6 +16,7 @@ export class ClienteCreateComponent implements OnInit {
     cliCpf: '',
     cliEmail: '',
     cliTelefone: '',
+    cliEndereco: '',
   };
 
   constructor(private clienteService: ClienteService, private router: Router) { }

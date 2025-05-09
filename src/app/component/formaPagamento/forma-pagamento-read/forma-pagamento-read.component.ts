@@ -10,7 +10,7 @@ import { FormaPagamentoService } from '../forma-pagamento.service'; // Ajuste o 
 export class FormaPagamentoReadComponent implements OnInit {
 
   formaPagamentos!: FormaPagamento[]; // Corrigido para plural
-  displayedColumns = ['fpgId', 'fpgDescricao', 'action']; // Corrigido para corresponder à interface
+  displayedColumns = ['fpgId', 'fpgDescricao', 'fpgTipo', 'fpgTaxa', 'fpgParcelamento', 'action']; // Corrigido para corresponder à interface
 
   constructor(private formaPagamentoService: FormaPagamentoService) { }
 

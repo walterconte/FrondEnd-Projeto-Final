@@ -20,6 +20,10 @@
             <input matInput placeholder="Telefone" [(ngModel)] = "cliente.cliTelefone" name="cliTelefone" disabled>
         </mat-form-field>
 
+        <mat-form-field>
+            <input matInput placeholder="Endereço" [(ngModel)] = "cliente.cliEndereco" name="cliEndereco" disabled>
+        </mat-form-field>
+
     </form>
 
     <button mat-raised-button (click)="deleteCliente()" color="primary">

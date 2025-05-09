@@ -25,15 +25,3 @@ button{
     button:active {
     transform: scale(0.95); /* Efeito de pressionar */
     }
-
-    table{
-        width: 100%;
-    }
-    
-    .edit > i{
-        color: #d9cd26;
-    }
-    
-    .delete > i{
-        color: #e35e6b;
-    }

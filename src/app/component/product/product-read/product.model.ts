@@ -3,4 +3,7 @@ export interface Product{ // Exportando a interface Product
     proNome: string
     proPrecoCusto: number
     proPrecoVenda: number
+    proDescricao: string
+    proQuantidadeStock: number
+    proStatus: string
 }
