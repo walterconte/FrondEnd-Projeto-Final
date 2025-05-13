@@ -3,14 +3,21 @@ form{
     flex-direction: column;
 }
 
+.button-container {
+    display: flex;
+    justify-content:flex-start; /* Espaça os botões */
+    margin-top: 20px; /* Espaço acima dos botões */
+    gap: 10px;
+}
+
 button{
-    background-color: #bfd6c7; /* Verde */
+    background-color: #b52c00; /* Vermelho */
     border: none; /* Sem borda */
-    color: rgb(0, 0, 0); /* Texto branco */
-    padding: 15px 32px; /* Espaçamento interno */
+    color: rgb(255, 255, 255); /* Texto branco */
+    padding: 15px 32px;; /* Espaçamento interno */
     text-align: center; /* Centraliza o texto */
     text-decoration: none; /* Remove sublinhado */
-    display: inline-block; /* Permite definir largura e altura */
+    display: table-cell; /* Permite definir largura e altura */
     font-size: 16px; /* Tamanho da fonte */
     margin: 4px 2px; /* Margem */
     cursor: pointer; /* Muda o cursor ao passar o mouse */
@@ -19,7 +26,7 @@ button{
     }
     
     button:hover {
-    background-color: #a5c9b1; /* Verde mais escuro ao passar o mouse */
+    background-color: #8c0005; /* Vermelho mais escuro ao passar o mouse */
     }
     
     button:active {

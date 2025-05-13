@@ -31,16 +31,21 @@
       <mat-form-field>
         <input matInput placeholder="Status" [(ngModel)]="product.proStatus" name="proStatus">
       </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Marca" [(ngModel)]="product.proMarca" name="proMarca">
+      </mat-form-field>
     </form>
     
-    <!-- Botões de ação -->
+    <div class="button-container">
+    
     <button mat-raised-button (click)="createProduct()" color="primary">
-      <!-- Botão de salvar -->
       Salvar
     </button>
     
     <button mat-raised-button (click)="cancel()">
-      <!-- Botão de cancelar -->
       Cancelar
     </button>
+    </div>
+
   </mat-card>

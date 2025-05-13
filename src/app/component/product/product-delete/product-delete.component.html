@@ -24,8 +24,13 @@
         <mat-form-field>
             <input matInput placeholder="Status" [value]="product.proStatus" name="proStatus" disabled>
         </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Marca" [value]="product.proMarca" name="proMarca" disabled>
+        </mat-form-field>
     </form>
 
+    <div class="button-container">
     <button mat-raised-button (click)="deleteProduct()" color="warn">
         Excluir
     </button>
@@ -33,5 +38,6 @@
     <button mat-raised-button (click)="cancel()">
         Cancelar
     </button>
+    </div>
 
 </mat-card>

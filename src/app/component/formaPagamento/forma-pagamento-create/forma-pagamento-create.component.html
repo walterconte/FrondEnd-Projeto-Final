@@ -18,7 +18,7 @@
             <input matInput placeholder="Parcelamento" [(ngModel)]="formaPagamento.fpgParcelamento" name="fpgParcelamento" required>
         </mat-form-field>
     </form>
-
+    <div class="button-container">
     <button mat-raised-button (click)="createFormaPagamento()" color="primary">
         Salvar
     </button>
@@ -26,5 +26,6 @@
     <button mat-raised-button (click)="cancel()">
         Cancelar
     </button>
+    </div>
 </mat-card>
 

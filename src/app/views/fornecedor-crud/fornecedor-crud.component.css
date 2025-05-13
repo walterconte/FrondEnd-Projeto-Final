@@ -1,7 +1,7 @@
 button{
-    background-color: #bfd6c7; /* Verde */
+    background-color: #b52c00; /* Verde */
     border: none; /* Sem borda */
-    color: rgb(0, 0, 0); /* Texto branco */
+    color: rgb(255, 255, 255); /* Texto branco */
     padding: 15px 32px; /* Espaçamento interno */
     text-align: center; /* Centraliza o texto */
     text-decoration: none; /* Remove sublinhado */
@@ -14,7 +14,7 @@ button{
     }
     
     button:hover {
-    background-color: #a5c9b1; /* Verde mais escuro ao passar o mouse */
+    background-color: #8c0005; /* Verde mais escuro ao passar o mouse */
     }
     
     button:active {

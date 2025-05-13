@@ -18,7 +18,12 @@ export class ProductCreateComponent implements OnInit {
     proPrecoVenda: 0,
     proDescricao: '',
     proQuantidadeStock: 0,
-    proStatus: ''
+    proStatus: '',
+    proCategoria: '',
+    proCodigoBarras: '' ,
+    proMarca: '' ,
+    proDataCadastro: new Date,
+    proDataAtualizacao: new Date
   };
 
   // Importando ProductService

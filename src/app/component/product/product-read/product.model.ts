@@ -6,4 +6,9 @@ export interface Product{ // Exportando a interface Product
     proDescricao: string
     proQuantidadeStock: number
     proStatus: string
+    proCategoria: string
+    proCodigoBarras: string 
+    proMarca: string 
+    proDataCadastro: Date
+    proDataAtualizacao: Date
 }
