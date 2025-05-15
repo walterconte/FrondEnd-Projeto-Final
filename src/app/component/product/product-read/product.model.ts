@@ -1,10 +1,10 @@
 export interface Product{ // Exportando a interface Product
     proId?: number
     proNome: string
-    proPrecoCusto: number
-    proPrecoVenda: number
+    proPrecoCusto: number | null
+    proPrecoVenda: number | null
     proDescricao: string
-    proQuantidadeStock: number
+    proQuantidadeEstoque: number | null
     proStatus: string
     proCategoria: string
     proCodigoBarras: string 

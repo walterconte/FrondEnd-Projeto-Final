@@ -11,7 +11,7 @@ import { FornecedorService } from '../fornecedor.service'; // Ajuste o caminho c
 export class FornecedorCreateComponent implements OnInit {
 
   fornecedor: Fornecedor = {
-    forCnpj: 0,                // Inicializado como 0
+    forCnpj: null,                // Inicializado como 0
     forRazaoSocial: '',        // Inicializado como string vazia
     forNomeFantasia: ''        // Inicializado como string vazia
   };

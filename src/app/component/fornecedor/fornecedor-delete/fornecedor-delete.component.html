@@ -1,13 +1,13 @@
 <mat-card>
     <mat-card-title> Excluir Fornececdor</mat-card-title>
     <form>
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <input matInput placeholder="Nome Fantasia" [(ngModel)]="fornecedor.forNomeFantasia" name="forNomeFantasia" disabled>
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder=" CNPJ" [(ngModel)]="fornecedor.forCnpj" name="forCnpj" disabled>
+        <mat-form-field appearance="outline">
+            <input matInput type="number" placeholder=" CNPJ" [(ngModel)]="fornecedor.forCnpj" name="forCnpj" disabled>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <input matInput placeholder="Razão Social" [(ngModel)]="fornecedor.forRazaoSocial" name="forRazaoSocial" disabled>
         </mat-form-field>
     </form>

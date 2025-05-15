@@ -1,31 +1,31 @@
 <mat-card>
     <mat-card-title>Excluir Produto</mat-card-title>
     <form>
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <input matInput placeholder="Nome" [value]="product.proNome" name="proNome" disabled>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <input matInput placeholder="Preço de custo(R$)" [value]="product.proPrecoCusto" name="proPrecoCusto" disabled>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <input matInput placeholder="Preço de venda (R$)" [value]="product.proPrecoVenda" name="proPrecoVenda" disabled>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <input matInput placeholder="Descrição" [value]="product.proDescricao" name="proDescricao" disabled>
         </mat-form-field>
 
-        <mat-form-field>
-            <input matInput placeholder="Quantidade em Stock" [value]="product.proQuantidadeStock" name="proQuantidadeStock" disabled>
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="Quantidade em Estoque" [value]="product.proQuantidadeEstoque" name="proQuantidadeEstoque" disabled>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <input matInput placeholder="Status" [value]="product.proStatus" name="proStatus" disabled>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <input matInput placeholder="Marca" [value]="product.proMarca" name="proMarca" disabled>
         </mat-form-field>
     </form>

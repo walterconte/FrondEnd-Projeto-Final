@@ -14,10 +14,10 @@ export class ProductCreateComponent implements OnInit {
   // Inicializando o objeto product com valores padrão
   product: Product = {
     proNome: '',          
-    proPrecoCusto: 0,    
-    proPrecoVenda: 0,
+    proPrecoCusto: null,    
+    proPrecoVenda: null,
     proDescricao: '',
-    proQuantidadeStock: 0,
+    proQuantidadeEstoque: null,
     proStatus: '',
     proCategoria: '',
     proCodigoBarras: '' ,

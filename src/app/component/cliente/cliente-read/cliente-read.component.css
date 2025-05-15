@@ -3,9 +3,9 @@ table{ /* Estilo para a tabela */
 }
 
 .edit > i{ /* Estilo para o ícone de edição */
-    color: #d9cd26;
+    color: #26d98e;
 }
 
 .delete > i{ /* Estilo para o ícone de exclusão */
-    color: #e35e6b;
+    color: #ce1717;
 }

@@ -13,7 +13,7 @@ export class FormaPagamentoCreateComponent implements OnInit {
   formaPagamento: FormaPagamento = {
     fpgDescricao: "",
     fpgTipo: "",
-    fpgTaxa: 0,
+    fpgTaxa: null,
     fpgParcelamento: ""
   };
 
