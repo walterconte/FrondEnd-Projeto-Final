@@ -2,7 +2,7 @@
     <mat-card-title>Novo Fornecedor</mat-card-title>
     <form>
         <mat-form-field appearance="outline">
-            <input matInput type="number" placeholder="CNPJ" [(ngModel)]="fornecedor.forCnpj" name="forCnpj" required>
+            <input matInput type="number" min="0" placeholder="CNPJ" [(ngModel)]="fornecedor.forCnpj" name="forCnpj" required>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <input matInput placeholder="Razão Social" [(ngModel)]="fornecedor.forRazaoSocial" name="forRazaoSocial" required>
