@@ -11,7 +11,7 @@
 
         <mat-form-field appearance="outline">
             <mat-label>CPF</mat-label> 
-            <input matInput placeholder="###.###.###-##" [(ngModel)] = "cliente.cliCpf" name="cliCpf">
+            <input matInput placeholder="###.###.###-##" [(ngModel)] = "cliente.cliCpf" name="cliCpf" maxlength="14">
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -21,7 +21,7 @@
 
         <mat-form-field appearance="outline">
             <mat-label>Telefone</mat-label> 
-            <input matInput placeholder="(43)99999-9999" [(ngModel)] = "cliente.cliTelefone" name="cliTelefone">
+            <input matInput placeholder="(43)99999-9999" [(ngModel)] = "cliente.cliTelefone" name="cliTelefone" maxlength="14">
         </mat-form-field>
 
         <mat-form-field appearance="outline">

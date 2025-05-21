@@ -2,13 +2,18 @@
     <mat-card-title>Novo Fornecedor</mat-card-title>
     <form>
         <mat-form-field appearance="outline">
-            <input matInput type="number" min="0" placeholder="CNPJ" [(ngModel)]="fornecedor.forCnpj" name="forCnpj" required>
+            <mat-label> CNPJ </mat-label>
+            <input matInput type="number" min="0"  [(ngModel)]="fornecedor.forCnpj" name="forCnpj" required>
         </mat-form-field>
+
         <mat-form-field appearance="outline">
-            <input matInput placeholder="Razão Social" [(ngModel)]="fornecedor.forRazaoSocial" name="forRazaoSocial" required>
+            <mat-label> Razão Social </mat-label>
+            <input matInput  [(ngModel)]="fornecedor.forRazaoSocial" name="forRazaoSocial" required>
         </mat-form-field>
+
         <mat-form-field appearance="outline">
-            <input matInput placeholder="Nome Fantasia" [(ngModel)]="fornecedor.forNomeFantasia" name="forNomeFantasia" required>
+            <mat-label> Nome Fantasia </mat-label>
+            <input matInput  [(ngModel)]="fornecedor.forNomeFantasia" name="forNomeFantasia" required>
         </mat-form-field>
     </form>
 

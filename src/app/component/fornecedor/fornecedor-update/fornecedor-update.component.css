@@ -11,7 +11,7 @@ form{
 }
 
 button{
-    background-color: #114f96; /* Vermelho */
+    background-color: #114f96; /* Azul */
     border: none; /* Sem borda */
     color: rgb(255, 255, 255); /* Texto branco */
     padding: 15px 32px;; /* Espaçamento interno */
@@ -26,9 +26,12 @@ button{
     }
     
     button:hover {
-    background-color: #1a0077; /* Vermelho mais escuro ao passar o mouse */
+    background-color: #1a0077; /* Azul mais escuro ao passar o mouse */
     }
     
     button:active {
     transform: scale(0.95); /* Efeito de pressionar */
+    }
+    mat-card{
+        box-shadow: none;
     }

@@ -5,34 +5,37 @@ form{
 
 .button-container {
     display: flex;
-    justify-content:flex-start; /* Espaça os botões */
-    margin-top: 20px; /* Espaço acima dos botões */
+    justify-content:flex-start; 
+    margin-top: 20px; 
     gap: 10px;
 }
 
 button{
-    background-color: #114f96; /* Vermelho */
-    border: none; /* Sem borda */
-    color: rgb(255, 255, 255); /* Texto branco */
-    padding: 15px 32px;; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto */
-    text-decoration: none; /* Remove sublinhado */
-    display: table-cell; /* Permite definir largura e altura */
-    font-size: 16px; /* Tamanho da fonte */
-    margin: 4px 2px; /* Margem */
-    cursor: pointer; /* Muda o cursor ao passar o mouse */
-    border-radius: 8px; /* Bordas arredondadas */
-    transition: background-color 0.3s, transform 0.2s; /* Transição suave */
+    background-color: #114f96; 
+    border: none; 
+    color: rgb(255, 255, 255); 
+    padding: 15px 32px;; 
+    text-align: center; 
+    text-decoration: none; 
+    display: table-cell; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    transition: background-color 0.3s, transform 0.2s; 
     }
     
     button:hover {
-    background-color: #1a0077; /* Vermelho mais escuro ao passar o mouse */
+    background-color: #1a0077; 
     }
     
     button:active {
-    transform: scale(0.95); /* Efeito de pressionar */
+    transform: scale(0.95); 
     }
-    /* Define a margem superior como 20px, margem direita como 15px, e margens inferior e esquerda como 0px */
+    
     mat-card-title{
         margin: 0px 0px 15px 3px;
+    }
+    mat-card{
+        box-shadow: none;
     }
