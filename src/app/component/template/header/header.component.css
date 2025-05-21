@@ -1,7 +1,7 @@
 .header {
     display: flex; /* Utiliza o modelo de layout flexível para alinhar os itens dentro do cabeçalho */
     align-items: center; /* Alinha os itens verticalmente ao centro */
-    background-color: #eeebeb; /* Define a cor de fundo do cabeçalho */
+    background-color: #cccccc; /* Define a cor de fundo do cabeçalho */
 }
 
 .header a {
