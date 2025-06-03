@@ -1,46 +1,62 @@
 <mat-card>
-
     <mat-card-title>Novo Cliente</mat-card-title>
-
-    <form>
-
-        <mat-form-field appearance="outline">
-            <mat-label>Nome</mat-label> 
-            <input matInput  [(ngModel)] = "cliente.cliNome" name="cliNome">
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-            <mat-label>CPF</mat-label> 
-            <input matInput placeholder="###.###.###-##" [(ngModel)] = "cliente.cliCpf" name="cliCpf" maxlength="14">
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-            <mat-label>Email</mat-label> 
-            <input matInput placeholder="exemplo@gmail.com" [(ngModel)] = "cliente.cliEmail" name="cliEmail">
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-            <mat-label>Telefone</mat-label> 
-            <input matInput placeholder="(43)99999-9999" [(ngModel)] = "cliente.cliTelefone" name="cliTelefone" maxlength="14">
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-            <mat-label>Endereço</mat-label> 
-            <input matInput placeholder="Rua: exemplo, n°100" [(ngModel)] = "cliente.cliEndereco" name="cliEndereco">
-        </mat-form-field>
-
+    <form #form="ngForm" novalidate>
+  
+      <!-- NOME -->
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput name="cliNome" [(ngModel)]="cliente.cliNome" #cliNome="ngModel" required minlength="3">
+        <mat-error *ngIf="cliNome.invalid && cliNome.touched">
+          Nome é obrigatório e deve ter pelo menos 3 caracteres.
+        </mat-error>
+      </mat-form-field>
+  
+      <!-- CPF -->
+      <mat-form-field appearance="outline">
+        <mat-label>CPF</mat-label>
+        <input matInput name="cliCpf" [(ngModel)]="cliente.cliCpf" #cliCpf="ngModel" required pattern="^\d{3}\.?\d{3}\.?\d{3}-?\d{2}$">
+        <mat-error *ngIf="cliCpf.invalid && cliCpf.touched">
+          CPF é obrigatório e deve estar no formato correto (ex: 000.000.000-00).
+        </mat-error>
+      </mat-form-field>
+  
+      <!-- EMAIL -->
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput name="cliEmail" [(ngModel)]="cliente.cliEmail" #cliEmail="ngModel" required email>
+        <mat-error *ngIf="cliEmail.invalid && cliEmail.touched">
+          Insira um e-mail válido.
+        </mat-error>
+      </mat-form-field>
+  
+      <!-- TELEFONE -->
+      <mat-form-field appearance="outline">
+        <mat-label>Telefone</mat-label>
+        <input matInput name="cliTelefone" [(ngModel)]="cliente.cliTelefone" #cliTelefone="ngModel" required pattern="^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$"maxlength="15">
+        <mat-error *ngIf="cliTelefone.invalid && cliTelefone.touched">
+          Insira um telefone válido (ex: (11) 91234-5678).
+        </mat-error>
+      </mat-form-field>
+  
+      <!-- ENDEREÇO -->
+      <mat-form-field appearance="outline">
+        <mat-label>Endereço</mat-label>
+        <input matInput name="cliEndereco" [(ngModel)]="cliente.cliEndereco" #cliEndereco="ngModel" required minlength="5">
+        <mat-error *ngIf="cliEndereco.invalid && cliEndereco.touched">
+          Endereço é obrigatório e deve ter pelo menos 5 caracteres.
+        </mat-error>
+      </mat-form-field>
+  
+      <!-- BOTÕES -->
+      <div class="button-container">
+        <button mat-raised-button color="primary" (click)="createCliente()" [disabled]="form.invalid">
+          Salvar
+        </button>
+        <button mat-raised-button (click)="cancel()">
+          Cancelar
+        </button>
+      </div>
+  
     </form>
-
-    <div class="button-container">
-     <button mat-raised-button (click)="createCliente()" color="primary">
-         Salvar
-     </button>
-
-     <button mat-raised-button (click)="cancel()">
-         Cancelar
-     </button>
-
-    </div>
-
-
-</mat-card>
+  </mat-card>
+  
