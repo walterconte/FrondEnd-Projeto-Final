@@ -1,61 +1,82 @@
-<!-- Formulário de criação de produto -->
 <mat-card>
-    <!-- Título do formulário -->
-    <mat-card-title>Novo Produto</mat-card-title>
-    
-    <!-- Formulário -->
-    <form>
-      <!-- Campo de nome do produto -->
-      <mat-form-field appearance="outline">
-        <mat-label> Nome </mat-label>
-        <input matInput  [(ngModel)]="product.proNome" name="proNome">
-      </mat-form-field>
-      
-      <!-- Campo de preço de custo -->
-      <mat-form-field appearance="outline">
-        <mat-label> *Preço de Custo (R$)*</mat-label>
-        <input matInput type="number"  [(ngModel)]="product.proPrecoCusto" name="proPrecoCusto">
-      </mat-form-field>
-      
-      <!-- Campo de preço de venda -->
-      <mat-form-field appearance="outline">
-        <mat-label>*Preço de Venda (R$)* </mat-label>
-        <input matInput type="number"  [(ngModel)]="product.proPrecoVenda" name="proPrecoVenda">
-      </mat-form-field>
+  <mat-card-title>Novo Produto</mat-card-title>
 
-      <mat-form-field appearance="outline">
-       <mat-label> Descrição </mat-label> 
-        <input matInput  [(ngModel)]="product.proDescricao" name="proDescricao">
-      </mat-form-field>
+  <form #form="ngForm" novalidate>
+    <!-- Nome -->
+    <mat-form-field appearance="outline">
+      <mat-label>Nome</mat-label>
+      <input matInput name="proNome" [(ngModel)]="product.proNome" #proNome="ngModel" required minlength="3">
+      <mat-error *ngIf="proNome.invalid && proNome.touched">
+        Nome é obrigatório e deve ter no mínimo 3 caracteres.
+      </mat-error>
+    </mat-form-field>
 
-      <mat-form-field appearance="outline">
-        <mat-label> Quantidade em Estoque </mat-label>
-        <input matInput type="number"  [(ngModel)]="product.proQuantidadeEstoque" name="proQuantidadeEstoque">
-      </mat-form-field>
+    <!-- Preço de Custo -->
+    <mat-form-field appearance="outline">
+      <mat-label>Preço de Custo (R$)</mat-label>
+      <input matInput type="number" name="proPrecoCusto" [(ngModel)]="product.proPrecoCusto" #proPrecoCusto="ngModel" required min="0.01">
+      <mat-error *ngIf="proPrecoCusto.invalid && proPrecoCusto.touched">
+        Preço de custo é obrigatório e deve ser maior que zero.
+      </mat-error>
+    </mat-form-field>
 
-      <mat-form-field appearance="outline">
-        <mat-label>Status do Produto</mat-label>
-        <mat-select matInput placeholder="Ex: True or False" [(ngModel)]="product.proStatus" name="proStatus" required>
-          <mat-option [value]="true">True</mat-option>
-          <mat-option [value]="false">False</mat-option>
-        </mat-select>
-      </mat-form-field>
+    <!-- Preço de Venda -->
+    <mat-form-field appearance="outline">
+      <mat-label>Preço de Venda (R$)</mat-label>
+      <input matInput type="number" name="proPrecoVenda" [(ngModel)]="product.proPrecoVenda" #proPrecoVenda="ngModel" required min="0.01">
+      <mat-error *ngIf="proPrecoVenda.invalid && proPrecoVenda.touched">
+        Preço de venda é obrigatório e deve ser maior que zero.
+      </mat-error>
+    </mat-form-field>
 
-      <mat-form-field appearance="outline">
-        <mat-label> Marca </mat-label>
-        <input matInput  [(ngModel)]="product.proMarca" name="proMarca">
-      </mat-form-field>
-    </form>
-    
+    <!-- Descrição -->
+    <mat-form-field appearance="outline">
+      <mat-label>Descrição</mat-label>
+      <input matInput name="proDescricao" [(ngModel)]="product.proDescricao" #proDescricao="ngModel" required minlength="5">
+      <mat-error *ngIf="proDescricao.invalid && proDescricao.touched">
+        Descrição é obrigatória e deve ter pelo menos 5 caracteres.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Quantidade em Estoque -->
+    <mat-form-field appearance="outline">
+      <mat-label>Quantidade em Estoque</mat-label>
+      <input matInput type="number" name="proQuantidadeEstoque" [(ngModel)]="product.proQuantidadeEstoque" #proQuantidadeEstoque="ngModel" required min="0">
+      <mat-error *ngIf="proQuantidadeEstoque.invalid && proQuantidadeEstoque.touched">
+        Quantidade é obrigatória e não pode ser negativa.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Status -->
+    <mat-form-field appearance="outline">
+      <mat-label>Status do Produto</mat-label>
+      <mat-select [(ngModel)]="product.proStatus" name="proStatus" #proStatus="ngModel" required>
+        <mat-option [value]="true">True</mat-option>
+        <mat-option [value]="false">False</mat-option>
+      </mat-select>
+      <mat-error *ngIf="proStatus.invalid && proStatus.touched">
+        Selecione o status do produto.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Marca -->
+    <mat-form-field appearance="outline">
+      <mat-label>Marca</mat-label>
+      <input matInput name="proMarca" [(ngModel)]="product.proMarca" #proMarca="ngModel" required minlength="2">
+      <mat-error *ngIf="proMarca.invalid && proMarca.touched">
+        Marca é obrigatória e deve ter pelo menos 2 caracteres.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Botões -->
     <div class="button-container">
-    
-    <button mat-raised-button (click)="createProduct()" color="primary">
-      Salvar
-    </button>
-    
-    <button mat-raised-button (click)="cancel()">
-      Cancelar
-    </button>
-    </div>
+      <button mat-raised-button color="primary" (click)="createProduct()" [disabled]="form.invalid">
+        Salvar
+      </button>
 
-  </mat-card>
+      <button mat-raised-button (click)="cancel()">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</mat-card>

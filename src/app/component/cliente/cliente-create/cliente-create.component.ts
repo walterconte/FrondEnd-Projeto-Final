@@ -25,18 +25,6 @@ export class ClienteCreateComponent implements OnInit {
   }
 
   createCliente(): void {
-    // Verificação: nenhum campo pode estar vazio ou só com espaços
-    if (
-      !this.cliente.cliNome.trim() ||
-      !this.cliente.cliCpf.trim() ||
-      !this.cliente.cliEmail.trim() ||
-      !this.cliente.cliTelefone.trim() ||
-      !this.cliente.cliEndereco.trim()
-    ) {
-      this.clienteService.showMessage('Por favor, preencha todos os campos obrigatórios!');
-      return;
-    }
-
     // Se passou na validação, prossegue com o cadastro
     this.clienteService.create(this.cliente).subscribe(() => {
       this.clienteService.showMessage('Cliente criado!');
