@@ -1,13 +1,72 @@
-.home .title{
-    font-size: 3rem;
-    font-weight: 300;
-    line-height: 1.2;
-    color: #000000;
-    background-color: #afadad;
-}
-
-.home .subtitle{
-    font-size: 1.1rem;
-    color: #000000;
-    background-color: #ffffff;
-}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #303030;
+    padding: 12px 20px;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.6em;
+    font-weight: bold;
+  }
+  
+  .busca {
+    width: 40%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .icones span {
+    margin-left: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .menu {
+    display: flex;
+    background: #444;
+    padding: 10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+  }
+  
+  .banner {
+    background: #ffc107;
+    color: #222;
+    text-align: center;
+    padding: 30px 10px;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .card {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  

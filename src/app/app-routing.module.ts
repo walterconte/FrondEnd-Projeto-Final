@@ -19,6 +19,7 @@ import { ClienteUpdateComponent } from './component/cliente/cliente-update/clien
 import { ClienteDeleteComponent } from './component/cliente/cliente-delete/cliente-delete.component';
 
 
+
 // Define as rotas da aplicação
 const routes: Routes = [
   {
@@ -98,6 +99,5 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)], // Importa o RouterModule e configura as rotas
   exports: [RouterModule] // Exporta o RouterModule para que possa ser utilizado em outros módulos
-  
 })
 export class AppRoutingModule { } // Declara o módulo de roteamento

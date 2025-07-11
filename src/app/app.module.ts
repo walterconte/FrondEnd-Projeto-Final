@@ -43,8 +43,6 @@ import { ClienteReadComponent } from './component/cliente/cliente-read/cliente-r
 import { ClienteUpdateComponent } from './component/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './component/cliente/cliente-delete/cliente-delete.component';
 import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.component';
-import{MatSelectModule} from '@angular/material/select';
-
 
 
 
@@ -77,6 +75,7 @@ import{MatSelectModule} from '@angular/material/select';
     ClienteUpdateComponent,
     ClienteDeleteComponent,
     ClienteCrudComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -92,7 +91,6 @@ import{MatSelectModule} from '@angular/material/select';
     MatInputModule,
     FormsModule,
     MatTableModule,
-    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

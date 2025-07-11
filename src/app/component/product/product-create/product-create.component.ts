@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '../product-read/product.model';
 import { ProductService } from '../product.service';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -9,15 +10,16 @@ import { ProductService } from '../product.service';
   templateUrl: './product-create.component.html',
   styleUrls: ['./product-create.component.css']
 })
+
 export class ProductCreateComponent implements OnInit {
 
   // Inicializando o objeto product com valores padrão
   product: Product = {
     proNome: '',          
-    proPrecoCusto: null,    
-    proPrecoVenda: null,
+    proPrecoCusto: 0,    
+    proPrecoVenda: 0,
     proDescricao: '',
-    proQuantidadeEstoque: null,
+    proQuantidadeStock: 0,
     proStatus: '',
     proCategoria: '',
     proCodigoBarras: '' ,
@@ -35,6 +37,21 @@ export class ProductCreateComponent implements OnInit {
 
   // Método chamado quando o botão "Salvar" é clicado
   createProduct(): void {
+
+    if(
+      !this.product.proNome.trim() ||
+      this.product.proPrecoCusto <= 0 ||
+      this.product.proPrecoVenda <= 0 ||
+      !this.product.proDescricao.trim() ||
+      this.product.proQuantidadeStock <= 0 ||
+      !this.product.proStatus.trim() ||
+      !this.product.proCategoria.trim() ||
+      !this.product.proCodigoBarras.trim() ||
+      !this.product.proMarca.trim()
+    ){
+      this.productService.showMessage('Por favor, preencha todos os campos obrigatorios')
+      return;
+    }
     this.productService.create(this.product).subscribe(() => {  // Chamando o método create do ProductService para criar o produto
       this.productService.showMessage('Produto criado!'); // Exibindo mensagem de sucesso após criar o produto
       this.router.navigate(['/products']); // Redirecionando para a página de produtos
@@ -46,4 +63,5 @@ export class ProductCreateComponent implements OnInit {
     // Redirecionando para a página de produtos
     this.router.navigate(['/products']);
   }
+  
 }

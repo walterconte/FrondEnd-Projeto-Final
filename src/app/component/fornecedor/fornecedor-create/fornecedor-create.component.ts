@@ -11,7 +11,7 @@ import { FornecedorService } from '../fornecedor.service'; // Ajuste o caminho c
 export class FornecedorCreateComponent implements OnInit {
 
   fornecedor: Fornecedor = {
-    forCnpj: null,                // Inicializado como 0
+    forCnpj: 0,                // Inicializado como 0
     forRazaoSocial: '',        // Inicializado como string vazia
     forNomeFantasia: ''        // Inicializado como string vazia
   };
@@ -24,6 +24,14 @@ export class FornecedorCreateComponent implements OnInit {
   }
 
   createFornecedor(): void {
+
+    if(
+      this.fornecedor.forCnpj <= 0 ||
+      !this.fornecedor.forRazaoSocial.trim() ||
+      !this.fornecedor.forNomeFantasia.trim()
+    ){
+      this.fornecedorService.showMessage('Por favor, preencha todos os campos obrigatórios')
+    }
     this.fornecedorService.create(this.fornecedor).subscribe(() => {
       this.fornecedorService.showMessage('Fornecedor criado!');
       this.router.navigate(['/fornecedores']); // Ajuste a rota conforme necessário

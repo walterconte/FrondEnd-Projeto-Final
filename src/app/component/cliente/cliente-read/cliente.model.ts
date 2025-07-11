@@ -1,8 +1,17 @@
 export interface Cliente {
     cliId?: number;
-    cliNome: String;
-    cliCpf: String;
-    cliEmail: String;
-    cliTelefone: String;
-    cliEndereco: String;
-}
+    cliNome: string;
+    cliCpf: string;
+  
+    // Contato
+    conCelular: string;
+    conTelefoneComercial: string;
+    conEmail: string;
+  
+    // Endereço
+    endRua: string;
+    endNumero: string;
+    endCidade: string;
+    endCep: string;
+    endEstado: string;
+  }

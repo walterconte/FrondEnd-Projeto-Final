@@ -1,53 +1,36 @@
 <mat-card>
-    <mat-card-title>Nova Forma de Pagamento</mat-card-title>
-    <form #form="ngForm" novalidate>
-  
-      <!-- DESCRIÇÃO -->
+  <mat-card-title>Nova Forma de Pagamento</mat-card-title>
+  <form>
+      
       <mat-form-field appearance="outline">
-        <mat-label>Descrição</mat-label>
-        <input matInput name="fpgDescricao" [(ngModel)]="formaPagamento.fpgDescricao" #fpgDescricao="ngModel" required minlength="3">
-        <mat-error *ngIf="fpgDescricao.invalid && fpgDescricao.touched">
-          Descrição é obrigatória e deve ter pelo menos 3 caracteres.
-        </mat-error>
+          <mat-label>Descrição</mat-label>
+          <input matInput placeholder="" [(ngModel)]="formaPagamento.fpgDescricao" name="fpgDescricao" required maxlength="255" >
       </mat-form-field>
-  
-      <!-- TIPO -->
+
       <mat-form-field appearance="outline">
-        <mat-label>Tipo</mat-label>
-        <input matInput name="fpgTipo" [(ngModel)]="formaPagamento.fpgTipo" #fpgTipo="ngModel" required minlength="3">
-        <mat-error *ngIf="fpgTipo.invalid && fpgTipo.touched">
-          Tipo é obrigatório e deve ter pelo menos 3 caracteres.
-        </mat-error>
+          <mat-label>Tipo</mat-label>
+          <input matInput placeholder="" [(ngModel)]="formaPagamento.fpgTipo" name="fpgTipo" required maxlength="50">
       </mat-form-field>
-  
-      <!-- TAXA -->
+
       <mat-form-field appearance="outline">
-        <mat-label>Taxa (%)</mat-label>
-        <input matInput type="number" name="fpgTaxa" [(ngModel)]="formaPagamento.fpgTaxa" #fpgTaxa="ngModel" required min="0" max="100" step="0.01">
-        <mat-error *ngIf="fpgTaxa.invalid && fpgTaxa.touched">
-          Insira uma taxa válida entre 0 e 100.
-        </mat-error>
+          <mat-label>Taxa</mat-label>
+          <input matInput placeholder="%" [(ngModel)]="formaPagamento.fpgTaxa" name="fpgTaxa" required maxlength="6">
       </mat-form-field>
-  
-      <!-- PARCELAMENTO -->
+
       <mat-form-field appearance="outline">
-        <mat-label>Parcelas</mat-label>
-        <input matInput type="number" name="fpgParcelamento" [(ngModel)]="formaPagamento.fpgParcelamento" #fpgParcelamento="ngModel" required min="1" max="48">
-        <mat-error *ngIf="fpgParcelamento.invalid && fpgParcelamento.touched">
-          Parcelas devem ser entre 1 e 48.
-        </mat-error>
+          <mat-label>Parcelamento</mat-label>
+          <input matInput placeholder="" [(ngModel)]="formaPagamento.fpgParcelamento" name="fpgParcelamento" required maxlength="10">
       </mat-form-field>
-  
-      <!-- BOTÕES -->
-      <div class="button-container">
-        <button mat-raised-button color="primary" (click)="createFormaPagamento()" [disabled]="form.invalid">
-          Salvar
-        </button>
-        <button mat-raised-button (click)="cancel()">
-          Cancelar
-        </button>
-      </div>
-  
-    </form>
-  </mat-card>
-  
+
+  </form>
+  <div class="button-container">
+  <button mat-raised-button (click)="createFormaPagamento()" color="primary">
+      Salvar
+  </button>
+ 
+  <button mat-raised-button (click)="cancel()">
+      Cancelar
+  </button>
+  </div>
+</mat-card>
+
