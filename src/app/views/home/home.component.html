@@ -1,24 +1,16 @@
-<section class="banner">
-    <h2>🚚 Frete Grátis para Todo o Brasil!</h2>
-    <p>Nas melhores marcas de autopeças.</p>
-  </section>
-  
-  <section class="cards">
-    <div class="card">
-      <h3>{{ vendasHoje }}</h3>
-      <p>Vendas Hoje</p>
-    </div>
-    <div class="card">
-      <h3>{{ clientesCadastrados }}</h3>
-      <p>Clientes Cadastrados</p>
-    </div>
-    <div class="card">
-      <h3>{{ produtosEmEstoque }}</h3>
-      <p>Produtos em Estoque</p>
-    </div>
-    <div class="card">
-      <h3>{{ produtosEmFalta }}</h3>
-      <p>Produtos em Falta</p>
-    </div>
-  </section>
-  
+<div class="mini-charts-container" style="display: flex; gap: 20px; justify-content: center; margin: 20px 0;">
+  <div class="mini-chart" style="width: 120px; text-align: center;">
+    <canvas baseChart [data]="vendasData" [type]="'doughnut'"></canvas>
+    <p>Vendas</p>
+  </div>
+
+  <div class="mini-chart" style="width: 120px; text-align: center;">
+    <canvas baseChart [data]="clientesData" [type]="'doughnut'"></canvas>
+    <p>Clientes Cadastrados</p>
+  </div>
+
+  <div class="mini-chart" style="width: 120px; text-align: center;">
+    <canvas baseChart [data]="estoqueData" [type]="'doughnut'"></canvas>
+    <p>Estoque de Peças</p>
+  </div>
+</div>

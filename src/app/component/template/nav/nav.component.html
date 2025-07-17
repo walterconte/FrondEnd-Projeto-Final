@@ -1,60 +1,59 @@
-<mat-sidenav-container class="container">
-    <!-- Contêiner principal que abriga a barra lateral (sidenav) e o conteúdo principal -->
+<!-- Toolbar fixo no topo -->
+<mat-toolbar color="primary" class="app-toolbar">
+  <span>Auto Peça</span>
+  <span class="spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</mat-toolbar>
 
-    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
-        <!-- Barra lateral que contém a navegação -->
-        <!-- 'mode="side"' define que a barra lateral ficará ao lado do conteúdo -->
-        <!-- 'opened' indica que a barra lateral está sempre aberta -->
-        <!-- 'fixedInViewport="true"' fixa a barra lateral na viewport -->
-        <!-- 'fixedTopGap="64"' define um espaço fixo no topo para o cabeçalho -->
+<!-- Menu dropdown dos três pontinhos -->
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="acao1()">Opção 1</button>
+  <button mat-menu-item (click)="acao2()">Opção 2</button>
+  <button mat-menu-item (click)="acao3()">Opção 3</button>
+</mat-menu>
 
-        <mat-nav-list class="nav-list">
-            <!-- Lista de navegação dentro da barra lateral -->
+<!-- Container com sidebar e conteúdo -->
+<mat-sidenav-container class="container" style="margin-top: 64px;">
+  <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">home</i> Início
+      </a>
+      <a mat-list-item routerLink="/cliente">
+        <i class="material-icons">account_circle</i> Cliente
+      </a>
+      <a mat-list-item routerLink="/products">
+        <i class="material-icons">storefront</i> Produtos
+      </a>
+      <a mat-list-item routerLink="/fornecedores">
+        <i class="material-icons">group_add</i> Fornecedores
+      </a>
+      <a mat-list-item routerLink="/formaPagamento">
+        <i class="material-icons">local_atm</i> Pagamento
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
 
-            <a mat-list-item routerLink="/">
-                <!-- Link para a página inicial -->
-                <i class="material-icons">
-                    home <!-- Ícone que representa "home" -->
-                </i>
-                Início <!-- Texto do link -->
-            </a>
-            <a mat-list-item routerLink="/cliente">
-                <!-- Link para a página de forma de pagamento -->
-                <i class="material-icons">
-                    account_circle <!-- Ícone que representa "local_atm" -->
-                </i>
-                Cliente <!-- Texto do link -->
-            </a>
+  <mat-sidenav-content class="content" style="padding: 20px;">
+    <!-- Seus mini gráficos doughnut lado a lado -->
+    <div class="mini-charts-container" style="display: flex; gap: 20px; justify-content: center; margin-bottom: 30px;">
+      <div class="mini-chart" style="width: 120px; text-align: center;">
+        <canvas baseChart [data]="vendasData" [type]="'doughnut'"></canvas>
+        <p>Vendas</p>
+      </div>
+      <div class="mini-chart" style="width: 120px; text-align: center;">
+        <canvas baseChart [data]="clientesData" [type]="'doughnut'"></canvas>
+        <p>Clientes Cadastrados</p>
+      </div>
+      <div class="mini-chart" style="width: 120px; text-align: center;">
+        <canvas baseChart [data]="estoqueData" [type]="'doughnut'"></canvas>
+        <p>Estoque de Peças</p>
+      </div>
+    </div>
 
-            <a mat-list-item routerLink="/products">
-                <!-- Link para a página de produtos -->
-                <i class="material-icons">
-                    storefront <!-- Ícone que representa "storefront" -->
-                </i>
-                Produtos <!-- Texto do link -->
-            </a>
-
-            <a mat-list-item routerLink="/fornecedores">
-                <!-- Link para a página de fornecedores -->
-                <i class="material-icons">
-                    group_add <!-- Ícone que representa "group_add" -->
-                </i>
-                Fornecedores <!-- Texto do link -->
-            </a>
-
-            <a mat-list-item routerLink="/formaPagamento">
-                <!-- Link para a página de forma de pagamento -->
-                <i class="material-icons">
-                    local_atm <!-- Ícone que representa "local_atm" -->
-                </i>
-                Pagamento <!-- Texto do link -->
-            </a>
-        </mat-nav-list>
-    </mat-sidenav>
-
-    <mat-sidenav-content class="content">
-        <!-- Área de conteúdo principal onde o conteúdo da rota será exibido -->
-        <!-- 'router-outlet' é um marcador onde o conteúdo das rotas será renderizado -->
-        <router-outlet></router-outlet>
-    </mat-sidenav-content>
+    <!-- Aqui você pode colocar o restante do conteúdo / router-outlet -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
 </mat-sidenav-container>

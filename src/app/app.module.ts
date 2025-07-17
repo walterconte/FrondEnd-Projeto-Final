@@ -44,7 +44,12 @@ import { ClienteUpdateComponent } from './component/cliente/cliente-update/clien
 import { ClienteDeleteComponent } from './component/cliente/cliente-delete/cliente-delete.component';
 import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.component';
 
+import { NgChartsModule } from 'ng2-charts';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { CommonModule } from '@angular/common';
 
+  
 
 
 @NgModule({
@@ -91,6 +96,10 @@ import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.componen
     MatInputModule,
     FormsModule,
     MatTableModule,
+    NgChartsModule,
+    MatMenuModule,
+    CommonModule, 
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
